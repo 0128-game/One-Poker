@@ -1,62 +1,59 @@
 <!doctype html>
 <html lang="ja">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>ワン・ポーカー（One Poker） — Image Version</title>
-<style>
-  :root{--bg:#07121a;--panel:#071921;--accent:#ffd166;--muted:#9fb3c8;--cardBg:#0b2533}
-  *{box-sizing:border-box;font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif}
-  body{margin:0;background:linear-gradient(180deg,#031018 0%,#07121a 100%);color:#e6f0f6}
-  .wrap{max-width:1000px;margin:28px auto;padding:18px}
-  header{display:flex;align-items:center;gap:12px}
-  h1{margin:0;font-size:20px}
-  .board{display:grid;grid-template-columns:1fr 320px;gap:16px;margin-top:18px}
-  .panel{background:rgba(255,255,255,0.03);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-  .table{display:flex;flex-direction:column;gap:12px}
-  .players{display:flex;justify-content:space-between}
-  .playerBox{width:48%;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
-  .lbl{font-size:13px;color:var(--muted)}
-  .life{font-weight:800;font-size:20px;margin-top:6px}
-  .cardImg{width:120px;height:170px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,0.6);background:var(--cardBg);display:flex;align-items:center;justify-content:center}
-  .controls{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-  .betRow{display:flex;gap:8px;align-items:center}
-  input[type=number], input[type=range]{background:transparent;color:#fff;border-radius:8px}
-  input[type=number]{width:90px;padding:8px;border:1px solid rgba(255,255,255,0.06)}
-  button{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#07121a;font-weight:700;cursor:pointer}
-  button.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
-  .log{background:#02151d;padding:10px;border-radius:8px;height:240px;overflow:auto;font-size:13px;color:var(--muted)}
-  aside .panel h3{margin-top:0}
-  .status{font-size:13px;color:var(--muted)}
-  footer{margin-top:14px;color:var(--muted);font-size:13px}
-  @media(max-width:880px){.board{grid-template-columns:1fr}.players{flex-direction:column}.playerBox{width:100%}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ワン・ポーカー — index</title>
+  <style>
+    :root{--bg:#031018;--panel:#07121a;--accent:#ffd166;--muted:#9fb3c8;--cardBg:#0b2533}
+    *{box-sizing:border-box;font-family: 'Hiragino Kaku Gothic ProN','Meiryo',sans-serif}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#020914 0%,#031018 100%);color:#e6f0f6}
+    .wrap{max-width:1100px;margin:28px auto;padding:18px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    h1{margin:0;font-size:20px}
+    .board{display:grid;grid-template-columns:1fr 360px;gap:16px;margin-top:18px}
+    .panel{background:rgba(255,255,255,0.03);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .players{display:flex;justify-content:space-between;gap:12px}
+    .playerBox{width:48%;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+    .lbl{font-size:13px;color:var(--muted)}
+    .life{font-weight:800;font-size:20px;margin-top:6px}
+    .cardImg{width:140px;height:200px;border-radius:8px;box-shadow:0 8px 30px rgba(0,0,0,0.6);background:var(--cardBg);display:flex;align-items:center;justify-content:center;object-fit:cover}
+    .controls{display:flex;flex-direction:column;gap:10px;margin-top:8px}
+    .betRow{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    input[type=number]{background:transparent;color:#fff;border-radius:8px;width:96px;padding:8px;border:1px solid rgba(255,255,255,0.06)}
+    button{padding:8px 12px;border-radius:8px;border:none;background:var(--accent);color:#07121a;font-weight:700;cursor:pointer}
+    button.alt{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .log{background:#02151d;padding:10px;border-radius:8px;height:260px;overflow:auto;font-size:13px;color:var(--muted)}
+    aside .panel h3{margin-top:0}
+    .status{font-size:13px;color:var(--muted)}
+    footer{margin-top:14px;color:var(--muted);font-size:13px}
+    @media(max-width:920px){.board{grid-template-columns:1fr}.players{flex-direction:column}.playerBox{width:100%}}
+  </style>
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>ワン・ポーカー（Image版） — 黒カジノ風</h1>
-    <div class="status">画像は <code>main/Trump/</code> から読み込みます。10は <code>10</code> でファイル名にしてください。</div>
-  </header>
+  <div class="wrap">
+    <header>
+      <h1>ワン・ポーカー（Image版・黒カジノ風）</h1>
+      <div class="status">画像は <code>main/Trump/</code> から読み込みます。ファイル名例: <code>SpadeA.png</code>, <code>Club10.png</code>, <code>Back.png</code></div>
+    </header>
 
-  <div class="board">
-    <section class="panel">
-      <div class="table">
+    <div class="board">
+      <section class="panel">
         <div class="players">
           <div class="playerBox" id="playerBox">
             <div class="lbl">あなた</div>
             <div class="life" id="playerLife">10</div>
-            <div style="margin-top:8px"><img id="playerCardImg" class="cardImg" src="main/Trump/Back.png" alt="player"/></div>
+            <div style="margin-top:10px"><img id="playerCardImg" class="cardImg" src="main/Trump/Back.png" alt="player"/></div>
           </div>
 
           <div class="playerBox" id="cpuBox">
             <div class="lbl">CPU</div>
             <div class="life" id="cpuLife">10</div>
-            <div style="margin-top:8px"><img id="cpuCardImg" class="cardImg" src="main/Trump/Back.png" alt="cpu"/></div>
+            <div style="margin-top:10px"><img id="cpuCardImg" class="cardImg" src="main/Trump/Back.png" alt="cpu"/></div>
           </div>
         </div>
 
-        <div class="panel" style="background:transparent;border:1px dashed rgba(255,255,255,0.03);margin-top:6px">
+        <div class="panel" style="background:transparent;border:1px dashed rgba(255,255,255,0.03);margin-top:12px">
           <div>ポット: <strong id="pot">0</strong> ライフ</div>
           <div class="controls">
             <div class="betRow">
@@ -68,7 +65,7 @@
               <button id="foldBtn" class="alt">フォールド</button>
               <button id="allinBtn" class="alt">オールイン</button>
             </div>
-            <div style="display:flex;gap:8px">
+            <div style="display:flex;gap:8px;margin-top:6px">
               <button id="nextBtn" class="alt">次のラウンド</button>
               <button id="restartBtn" class="alt">リスタート</button>
             </div>
@@ -76,186 +73,118 @@
         </div>
 
         <div class="log" id="log"></div>
-      </div>
-    </section>
+      </section>
 
-    <aside class="panel">
-      <h3>ルール（簡易）</h3>
-      <ol>
-        <li>カードは各ラウンド1枚ずつ。画像は main/Trump/ から読み込み。</li>
-        <li>ベットはライフで行う。レイズ可。</li>
-        <li>両者がチェックかコールでショーダウン。数字の大きい方が勝ち。</li>
-        <li>勝者がポットを全部獲得。引き分けは分割。</li>
-      </ol>
+      <aside class="panel">
+        <h3>ルール（簡易）</h3>
+        <ol>
+          <li>カードは1ラウンドごとに1枚ずつ。画像は <code>main/Trump/</code> から読み込みます。</li>
+          <li>ベットはライフで行う（レイズ可）。</li>
+          <li>両者がチェックかコールでショーダウン。数字の大小のみで勝敗を判定。</li>
+          <li>勝者がポットをすべて獲得。引き分けはポットを分割。</li>
+        </ol>
 
-      <h3>CPUの思考</h3>
-      <p class="status">簡易だがレイズにも反応。強いカードで攻めやすい。</p>
+        <h3>CPUの思考</h3>
+        <p class="status">カード強度に応じた確率的な判断。レイズ/リレイズ/コール/フォールドを行います。</p>
 
-      <h3>状態</h3>
-      <div>ラウンド: <span id="round">0</span></div>
-      <div>最後の勝者: <span id="lastWinner">-</span></div>
-    </aside>
+        <h3>状態</h3>
+        <div>ラウンド: <span id="round">0</span></div>
+        <div>最後の勝者: <span id="lastWinner">-</span></div>
+      </aside>
+    </div>
+
+    <footer>ファイル名例: <code>main/Trump/SpadeA.png</code>, <code>main/Trump/Heart10.png</code>, 裏面: <code>main/Trump/Back.png</code></footer>
   </div>
 
-  <footer>画像配置とファイル名: main/Trump/SpadeA.png など。Back.png を裏面に使用。</footer>
-</div>
+  <script>
+    // --- 定義 ---
+    const NUM_NAMES = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+    function buildDeck(){
+      const suits = ['Spade','Diamond','Heart','Club'];
+      const arr=[];
+      for(const s of suits) for(const n of NUM_NAMES) arr.push({suit:s,rank:n});
+      for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}
+      return arr;
+    }
 
-<script>
-const NUM_NAMES = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
-// Build deck: 4 suits x NUM_NAMES
-function buildDeck(){
-  const suits = ['Spade','Diamond','Heart','Club'];
-  const arr=[];
-  for(const s of suits) for(const n of NUM_NAMES) arr.push({suit:s,rank:n});
-  // shuffle
-  for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}
-  return arr;
-}
+    // --- 状態 ---
+    const state = {deck:buildDeck(),playerLife:10,cpuLife:10,pot:0,playerCard:null,cpuCard:null,playerCommitted:0,cpuCommitted:0,round:0,phase:'idle',lastWinner:null};
 
-const state = {
-  deck: buildDeck(),
-  playerLife: 10, cpuLife:10, pot:0,
-  playerCard:null, cpuCard:null,
-  playerCommitted:0, cpuCommitted:0,
-  round:0, phase:'idle', lastWinner:null
-};
+    // --- DOM ---
+    const playerLifeEl=document.getElementById('playerLife');
+    const cpuLifeEl=document.getElementById('cpuLife');
+    const potEl=document.getElementById('pot');
+    const playerCardImg=document.getElementById('playerCardImg');
+    const cpuCardImg=document.getElementById('cpuCardImg');
+    const betInput=document.getElementById('betInput');
+    const betBtn=document.getElementById('betBtn');
+    const raiseBtn=document.getElementById('raiseBtn');
+    const checkBtn=document.getElementById('checkBtn');
+    const foldBtn=document.getElementById('foldBtn');
+    const allinBtn=document.getElementById('allinBtn');
+    const nextBtn=document.getElementById('nextBtn');
+    const restartBtn=document.getElementById('restartBtn');
+    const logEl=document.getElementById('log');
+    const roundEl=document.getElementById('round');
+    const lastWinnerEl=document.getElementById('lastWinner');
 
-// DOM
-const playerLifeEl=document.getElementById('playerLife');
-const cpuLifeEl=document.getElementById('cpuLife');
-const potEl=document.getElementById('pot');
-const playerCardImg=document.getElementById('playerCardImg');
-const cpuCardImg=document.getElementById('cpuCardImg');
-const betInput=document.getElementById('betInput');
-const betBtn=document.getElementById('betBtn');
-const raiseBtn=document.getElementById('raiseBtn');
-const checkBtn=document.getElementById('checkBtn');
-const foldBtn=document.getElementById('foldBtn');
-const allinBtn=document.getElementById('allinBtn');
-const nextBtn=document.getElementById('nextBtn');
-const restartBtn=document.getElementById('restartBtn');
-const logEl=document.getElementById('log');
-const roundEl=document.getElementById('round');
-const lastWinnerEl=document.getElementById('lastWinner');
+    function log(msg){const t=new Date().toLocaleTimeString();logEl.innerHTML=`<div>[${t}] ${msg}</div>`+logEl.innerHTML}
+    function updateUI(){
+      playerLifeEl.textContent=state.playerLife; cpuLifeEl.textContent=state.cpuLife; potEl.textContent=state.pot; roundEl.textContent=state.round; lastWinnerEl.textContent=state.lastWinner||'-';
+      playerCardImg.src = state.playerCard ? cardPath(state.playerCard) : 'main/Trump/Back.png';
+      cpuCardImg.src = (state.phase==='betting' && state.cpuCard) ? 'main/Trump/Back.png' : (state.cpuCard ? cardPath(state.cpuCard) : 'main/Trump/Back.png');
+      const disabled = state.phase !== 'betting';
+      betInput.disabled = disabled; betBtn.disabled = disabled; raiseBtn.disabled = disabled; checkBtn.disabled = disabled; foldBtn.disabled = disabled; allinBtn.disabled = disabled;
+      if(state.playerLife<=0||state.cpuLife<=0){betInput.disabled=true;betBtn.disabled=true;raiseBtn.disabled=true;checkBtn.disabled=true;foldBtn.disabled=true;allinBtn.disabled=true}
+    }
 
-function log(msg){const t=new Date().toLocaleTimeString();logEl.innerHTML=`<div>[${t}] ${msg}</div>`+logEl.innerHTML}
-function updateUI(){playerLifeEl.textContent=state.playerLife;cpuLifeEl.textContent=state.cpuLife;potEl.textContent=state.pot;roundEl.textContent=state.round;lastWinnerEl.textContent=state.lastWinner||'-';
-  // card imgs
-  playerCardImg.src = state.playerCard ? cardPath(state.playerCard) : 'main/Trump/Back.png';
-  cpuCardImg.src = (state.phase==='betting' && state.cpuCard) ? 'main/Trump/Back.png' : (state.cpuCard ? cardPath(state.cpuCard) : 'main/Trump/Back.png');
-  // disable controls when not betting
-  const disabled = state.phase !== 'betting';
-  betInput.disabled = disabled; betBtn.disabled = disabled; raiseBtn.disabled = disabled; checkBtn.disabled = disabled; foldBtn.disabled = disabled; allinBtn.disabled = disabled;
-  if(state.playerLife<=0 || state.cpuLife<=0){betInput.disabled=true; betBtn.disabled=true; raiseBtn.disabled=true; checkBtn.disabled=true; foldBtn.disabled=true; allinBtn.disabled=true}
-}
+    function cardPath(c){return `main/Trump/${c.suit}${c.rank}.png`}
+    function drawCard(){ if(state.deck.length===0) state.deck=buildDeck(); return state.deck.pop(); }
 
-function cardPath(c){return `main/Trump/${c.suit}${c.rank}.png`}
+    function startRound(){ if(state.playerLife<=0||state.cpuLife<=0){log('ゲーム終了。リスタートしてください。');return;} state.round++; state.pot=0; state.playerCommitted=0; state.cpuCommitted=0; state.playerCard=drawCard(); state.cpuCard=drawCard(); state.phase='betting'; log(`ラウンド ${state.round} 開始。カードを引きました。ベットしてください。`); betInput.max = Math.max(1,state.playerLife); betInput.value = 1; updateUI(); }
 
-function drawCard(){ if(state.deck.length===0) state.deck=buildDeck(); return state.deck.pop(); }
+    function endRoundCleanup(){ state.pot=0; state.playerCard=null; state.cpuCard=null; state.phase='idle'; updateUI(); }
 
-function startRound(){ if(state.playerLife<=0||state.cpuLife<=0){log('ゲーム終了。リスタートしてください。');return;} state.round++; state.pot=0; state.playerCommitted=0; state.cpuCommitted=0; state.playerCard=drawCard(); state.cpuCard=drawCard(); state.phase='betting'; log(`ラウンド ${state.round} 開始。カードを引きました。ベットしてください。`); betInput.max = Math.max(1,state.playerLife); betInput.value = 1; updateUI(); }
+    function showdown(){ state.phase='showdown'; log(`ショーダウン — あなた: ${state.playerCard.rank} / CPU: ${state.cpuCard.rank}`);
+      const pr = rankValue(state.playerCard.rank); const cr = rankValue(state.cpuCard.rank);
+      if(pr>cr){ state.playerLife += state.pot; state.lastWinner='あなた'; log(`あなたの勝ち！ ポット ${state.pot} を獲得。`); }
+      else if(pr<cr){ state.cpuLife += state.pot; state.lastWinner='CPU'; log(`CPUの勝ち。CPU がポット ${state.pot} を獲得。`); }
+      else{ const half=Math.floor(state.pot/2); state.playerLife += half; state.cpuLife += (state.pot-half); state.lastWinner='引き分け'; log(`引き分け。ポットを分割。あなた ${half} / CPU ${state.pot-half}`); }
+      endRoundCleanup(); }
 
-function endRoundCleanup(){ state.pot=0; state.playerCard=null; state.cpuCard=null; state.phase='idle'; updateUI(); }
+    function rankValue(r){ if(r==='A') return 1; if(r==='J') return 11; if(r==='Q') return 12; if(r==='K') return 13; return Number(r); }
 
-function showdown(){ state.phase='showdown'; log(`ショーダウン — あなた: ${state.playerCard.rank} / CPU: ${state.cpuCard.rank}`);
-  const pr = rankValue(state.playerCard.rank); const cr = rankValue(state.cpuCard.rank);
-  if(pr>cr){ state.playerLife += state.pot; state.lastWinner='あなた'; log(`あなたの勝ち！ ポット ${state.pot} を獲得。`); }
-  else if(pr<cr){ state.cpuLife += state.pot; state.lastWinner='CPU'; log(`CPUの勝ち。CPU がポット ${state.pot} を獲得。`); }
-  else{ const half=Math.floor(state.pot/2); state.playerLife += half; state.cpuLife += (state.pot-half); state.lastWinner='引き分け'; log(`引き分け。ポットを分割。あなた ${half} / CPU ${state.pot-half}`); }
-  endRoundCleanup(); }
+    // --- プレイヤーアクション ---
+    betBtn.addEventListener('click', ()=>{
+      if(state.phase!=='betting') return; let amt = Math.max(1,Math.floor(Number(betInput.value)||1)); amt = Math.min(amt,state.playerLife);
+      const need = Math.max(0, state.cpuCommitted - state.playerCommitted);
+      if(need>0){ if(amt<need){ log(`コールに不足しています（必要: ${need}）。`); return; } if(amt===need){ commitPlayer(amt); log(`あなたはコールしました（${amt}）。`); cpuAfterCall(); return; } const raiseAmt = amt - need; commitPlayer(amt); log(`あなたはコール ${need} の後、レイズ ${raiseAmt} しました。`); cpuRespondToRaise(raiseAmt); }
+      else{ commitPlayer(amt); log(`あなたは先にベットしました（${amt}）。`); cpuRespondToBet(); }
+    });
 
-function rankValue(r){ // map to numeric for comparison
-  if(r==='A') return 1; if(r==='J') return 11; if(r==='Q') return 12; if(r==='K') return 13; return Number(r);
-}
+    raiseBtn.addEventListener('click', ()=>{ if(state.phase!=='betting') return; let amt = Math.max(1,Math.floor(Number(betInput.value)||1)); amt = Math.min(amt,state.playerLife); const need = Math.max(0, state.cpuCommitted - state.playerCommitted); if(need>0 && amt<=need){ log('レイズするにはコール分より多く入力してください。'); return; } commitPlayer(amt); if(need>0) log(`あなたはコール ${need} の後、レイズしました（合計 ${amt}）。`); else log(`あなたはレイズしました（${amt}）。`); cpuRespondToRaise(amt - need); });
 
-// Player actions
-betBtn.addEventListener('click', ()=>{
-  if(state.phase!=='betting') return;
-  let amt = Math.max(1, Math.floor(Number(betInput.value)||1)); amt = Math.min(amt, state.playerLife);
-  // Determine if this is a call (matching cpuCommitted) or an opening bet
-  const need = Math.max(0, state.cpuCommitted - state.playerCommitted);
-  if(need>0){ // player is calling (or raising if amt>need)
-    if(amt < need){ log(`コールに不足しています（必要: ${need}）。`); return; }
-    // if amt === need -> call
-    if(amt === need){ commitPlayer(amt); log(`あなたはコールしました（${amt}）。`); cpuAfterCall(); return; }
-    // amt > need -> raise by (amt-need)
-    const raiseAmt = amt - need; commitPlayer(amt); log(`あなたはコール ${need} の後、レイズ ${raiseAmt} しました。`); // CPU responds
-    cpuRespondToRaise(raiseAmt);
-  } else {
-    // opening bet
-    commitPlayer(amt); log(`あなたは先にベットしました（${amt}）。`); cpuRespondToBet();
-  }
-});
+    checkBtn.addEventListener('click', ()=>{ if(state.phase!=='betting') return; const need = Math.max(0, state.cpuCommitted - state.playerCommitted); if(need>0){ log('相手がベットしています。チェックはできません。フォールドかコールしてください。'); return; } log('あなたはチェックしました。両者チェックでショーダウンへ。'); showdown(); });
 
-raiseBtn.addEventListener('click', ()=>{
-  if(state.phase!=='betting') return; let amt = Math.max(1,Math.floor(Number(betInput.value)||1)); amt = Math.min(amt, state.playerLife);
-  // if cpuCommitted>playerCommitted, must at least call then raise; else this is open+raise
-  const need = Math.max(0, state.cpuCommitted - state.playerCommitted);
-  if(need>0 && amt<=need){ log('レイズするにはコール分より多く入力してください。'); return; }
-  commitPlayer(amt); if(need>0) log(`あなたはコール ${need} の後、レイズしました（合計 ${amt}）。`); else log(`あなたはレイズしました（${amt}）。`);
-  cpuRespondToRaise(amt - need);
-});
+    foldBtn.addEventListener('click', ()=>{ if(state.phase!=='betting') return; state.phase='idle'; state.cpuLife += state.pot; state.lastWinner='CPU(フォールド)'; log('あなたはフォールドしました。CPU がポットを獲得します。'); endRoundCleanup(); });
 
-checkBtn.addEventListener('click', ()=>{
-  if(state.phase!=='betting') return; const need = Math.max(0, state.cpuCommitted - state.playerCommitted);
-  if(need>0){ // cannot check if opponent has bet; treat as call 0 -> disallowed
-    log('相手がベットしています。チェックはできません。フォールドかコールしてください。'); return;
-  }
-  // both checked -> showdown
-  log('あなたはチェックしました。両者チェックでショーダウンへ。'); showdown();
-});
+    allinBtn.addEventListener('click', ()=>{ if(state.phase!=='betting') return; const amt = state.playerLife; commitPlayer(amt); log(`あなたはオールインしました（${amt}）。`); cpuRespondToRaise(Math.max(0, amt - Math.max(0, state.cpuCommitted - state.playerCommitted))); });
 
-foldBtn.addEventListener('click', ()=>{
-  if(state.phase!=='betting') return; state.phase='idle'; state.cpuLife += state.pot; state.lastWinner='CPU(フォールド)'; log('あなたはフォールドしました。CPU がポットを獲得します。'); endRoundCleanup(); });
+    function commitPlayer(amount){ amount = Math.min(amount, state.playerLife); state.playerLife -= amount; state.playerCommitted += amount; state.pot += amount; updateUI(); }
 
-allinBtn.addEventListener('click', ()=>{ if(state.phase!=='betting') return; const amt = state.playerLife; commitPlayer(amt); log(`あなたはオールインしました（${amt}）。`); // If there was an outstanding toCall, this covers it
-  // Decide if this was raise or call
-  const need = Math.max(0, state.cpuCommitted - state.playerCommitted + amt); // approximate
-  cpuRespondToRaise(Math.max(0, amt - Math.max(0, state.cpuCommitted - state.playerCommitted)));
-});
+    // --- CPUの判断ロジック ---
+    function cpuRespondToBet(){ const cardStrength = (rankValue(state.cpuCard.rank)-1)/12; const aggression = 0.2 + cardStrength*0.7; const toCall = state.playerCommitted - state.cpuCommitted; if(toCall>=state.cpuLife){ if(Math.random()<aggression){ const all=state.cpuLife; state.cpuCommitted+=all; state.pot+=all; state.cpuLife=0; log(`CPU はオールインでコールしました（${all}）。`); showdown(); } else { log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); } updateUI(); return; } const callProb = aggression - (toCall/(state.cpuLife+1))*0.3; if(Math.random() < callProb){ state.cpuLife -= toCall; state.cpuCommitted += toCall; state.pot += toCall; log(`CPU はコールしました（${toCall}）。`); updateUI(); showdown(); return; } if(Math.random() < aggression*0.4){ const raise = Math.min(state.cpuLife - toCall, Math.max(1,Math.floor(state.cpuLife* (0.15+Math.random()*0.45)))); state.cpuLife -= (toCall+raise); state.cpuCommitted += (toCall+raise); state.pot += (toCall+raise); log(`CPU はコール後、レイズしました（コール ${toCall} + レイズ ${raise}）。`); updateUI(); return; } log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); updateUI(); }
 
-function commitPlayer(amount){ amount = Math.min(amount, state.playerLife); state.playerLife -= amount; state.playerCommitted += amount; state.pot += amount; updateUI(); }
+    function cpuRespondToRaise(raiseAmount){ const cardStrength = (rankValue(state.cpuCard.rank)-1)/12; const aggression = 0.2 + cardStrength*0.7; const toCall = state.playerCommitted - state.cpuCommitted; if(toCall >= state.cpuLife){ if(Math.random()<aggression){ const all=state.cpuLife; state.cpuCommitted+=all; state.pot+=all; state.cpuLife=0; log(`CPU はオールインでコールしました（${all}）。`); showdown(); } else { log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); } updateUI(); return; } const callProb = aggression - (toCall/(state.cpuLife+1))*0.35; if(Math.random()<callProb){ state.cpuLife -= toCall; state.cpuCommitted += toCall; state.pot += toCall; log(`CPU はコールしました（${toCall}）。`); updateUI(); showdown(); return; } if(Math.random() < aggression*0.3){ const extra = Math.min(state.cpuLife - toCall, Math.max(1, Math.floor(state.cpuLife*(0.15+Math.random()*0.4)))); state.cpuLife -= (toCall+extra); state.cpuCommitted += (toCall+extra); state.pot += (toCall+extra); log(`CPU はさらにレイズしました（コール ${toCall} + レイズ ${extra}）。`); updateUI(); return; } log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); updateUI(); }
 
-// CPU responses
-function cpuRespondToBet(){ // player opened a bet
-  const cardStrength = (rankValue(state.cpuCard.rank)-1)/12; // 0..1
-  const aggression = 0.2 + cardStrength*0.7;
-  // decide fold/call/raise
-  const toCall = state.playerCommitted - state.cpuCommitted;
-  if(toCall>=state.cpuLife){ // must all-in or fold
-    if(Math.random()<aggression){ const all=state.cpuLife; state.cpuCommitted+=all; state.pot+=all; state.cpuLife=0; log(`CPU はオールインでコールしました（${all}）。`); showdown(); } else { log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); }
-    updateUI(); return;
-  }
-  // standard decision
-  const callProb = aggression - (toCall/(state.cpuLife+1))*0.3;
-  if(Math.random() < callProb){ // call
-    state.cpuLife -= toCall; state.cpuCommitted += toCall; state.pot += toCall; log(`CPU はコールしました（${toCall}）。`); updateUI(); showdown(); return; }
-  // maybe raise
-  if(Math.random() < aggression*0.4){ const raise = Math.min(state.cpuLife - toCall, Math.max(1,Math.floor(state.cpuLife* (0.15+Math.random()*0.45)))); state.cpuLife -= (toCall+raise); state.cpuCommitted += (toCall+raise); state.pot += (toCall+raise); log(`CPU はコール後、レイズしました（コール ${toCall} + レイズ ${raise}）。`); updateUI(); return; }
-  // else fold
-  log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); updateUI();
-}
+    function cpuAfterCall(){ showdown(); }
 
-function cpuRespondToRaise(raiseAmount){ // player raised by raiseAmount (>=1)
-  const cardStrength = (rankValue(state.cpuCard.rank)-1)/12; const aggression = 0.2 + cardStrength*0.7; const toCall = state.playerCommitted - state.cpuCommitted;
-  if(toCall >= state.cpuLife){ if(Math.random()<aggression){ const all=state.cpuLife; state.cpuCommitted+=all; state.pot+=all; state.cpuLife=0; log(`CPU はオールインでコールしました（${all}）。`); showdown(); } else { log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); } updateUI(); return; }
-  // evaluate
-  const callProb = aggression - (toCall/(state.cpuLife+1))*0.35;
-  if(Math.random()<callProb){ state.cpuLife -= toCall; state.cpuCommitted += toCall; state.pot += toCall; log(`CPU はコールしました（${toCall}）。`); updateUI(); showdown(); return; }
-  // sometimes re-raise if strong
-  if(Math.random() < aggression*0.3){ const extra = Math.min(state.cpuLife - toCall, Math.max(1, Math.floor(state.cpuLife*(0.15+Math.random()*0.4)))); state.cpuLife -= (toCall+extra); state.cpuCommitted += (toCall+extra); state.pot += (toCall+extra); log(`CPU はさらにレイズしました（コール ${toCall} + レイズ ${extra}）。`); updateUI(); return; }
-  // fold
-  log('CPU はフォールドしました。'); state.playerLife += state.pot; state.lastWinner='あなた(フォールド)'; endRoundCleanup(); updateUI(); }
+    // --- ボタン ---
+    nextBtn.addEventListener('click', ()=>{ startRound(); });
+    restartBtn.addEventListener('click', ()=>{ state.playerLife=10; state.cpuLife=10; state.deck=buildDeck(); state.round=0; state.lastWinner=null; state.playerCard=null; state.cpuCard=null; state.pot=0; state.phase='idle'; log('ゲームをリスタートしました。'); updateUI(); });
 
-function cpuAfterCall(){ // when player called equal to cpuCommitted
-  // showdown
-  showdown(); }
-
-nextBtn.addEventListener('click', ()=>{ startRound(); });
-restartBtn.addEventListener('click', ()=>{ state.playerLife=10; state.cpuLife=10; state.deck=buildDeck(); state.round=0; state.lastWinner=null; state.playerCard=null; state.cpuCard=null; state.pot=0; state.phase='idle'; log('ゲームをリスタートしました。'); updateUI(); });
-
-// initial
-updateUI(); log('画像版ワン・ポーカー（レイズ対応）へようこそ。"次のラウンド"で開始してください。');
-</script>
+    // --- 初期化 ---
+    updateUI(); log('index.html に統合されたワン・ポーカーへようこそ。"次のラウンド"で開始してください。');
+  </script>
 </body>
 </html>
